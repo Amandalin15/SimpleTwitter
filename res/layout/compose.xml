@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <Button
+         android:id="@+id/btnTweet"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignRight="@+id/etInput"
+         android:layout_below="@+id/etInput"
+         android:clickable="true"
+         android:onClick="onTweet"
+         android:text="@string/tweet_button" />
+
+     <EditText
+         android:id="@+id/etInput"
+         android:layout_width="match_parent"
+         android:layout_height="150dp"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/title"
+         android:ems="10"
+         android:gravity="top"
+         android:inputType="textMultiLine"
+         android:maxLength="140"
+         android:padding="5sp"
+         android:textSize="16sp" >
+
+         <requestFocus />
+     </EditText>
+
+     <TextView
+         android:id="@+id/title"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:text="What&apos;s happing?"
+         android:textSize="20dp"
+         android:textStyle="bold" />
+
+     <TextView
+         android:id="@+id/tvWordCount"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/btnTweet"
+         android:layout_toLeftOf="@+id/btnTweet"
+         android:text="128"
+         android:textColor="@android:color/darker_gray" />
+    
+</RelativeLayout>
